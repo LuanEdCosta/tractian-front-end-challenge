@@ -1,1 +1,12 @@
-{}
+{
+  "title": "Ativos",
+  "emptyMessage": "Nenhum ativo para exibir",
+  "table": {
+    "head": {
+      "id": "ID",
+      "status": "Status",
+      "name": "Nome",
+      "healthScore": "Saúde (em %)"
+    }
+  }
+}

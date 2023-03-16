@@ -1,0 +1,27 @@
+{
+  "error": {
+    "general": {
+      "generic": "Ocorreu um erro desconhecido"
+    },
+    "asset": {
+      "findMany": "Erro ao carregar ativos"
+    },
+    "company": {
+      "findMany": "Erro ao carregar empresas"
+    },
+    "unit": {
+      "findMany": "Erro ao carregar unidades"
+    },
+    "user": {
+      "findMany": "Erro ao carregar usuários"
+    },
+    "workOrder": {
+      "findMany": "Erro ao carregar ordens de serviço"
+    }
+  },
+  "success": {
+    "general": {
+      "generic": "Operação terminou com sucesso"
+    }
+  }
+}

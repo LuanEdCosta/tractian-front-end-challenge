@@ -4,8 +4,10 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "healthscore",
     "tanstack",
-    "tractian"
+    "tractian",
+    "workorders"
   ],
   "ignoreWords": [],
   "import": []

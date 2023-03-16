@@ -19,12 +19,14 @@ export type AssetModel = {
   }[]
 
   metrics: {
+    totalUptime: number
     lastUptimeAt: string
     totalCollectsUptime: number
-    totalUptime: number
   }
 
   specifications: {
+    rpm?: number
+    power?: number
     maxTemp: number
   }
 }

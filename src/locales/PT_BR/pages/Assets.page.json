@@ -8,5 +8,9 @@
       "name": "Nome",
       "healthScore": "Saúde (em %)"
     }
+  },
+  "deleteModal": {
+    "title": "Excluir Ativo",
+    "message": "Tem certeza que deseja excluir este ativo?"
   }
 }

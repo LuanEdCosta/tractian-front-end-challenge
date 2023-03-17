@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 
-interface useNotifyParams {
+type useNotifyParams = {
   t: string
   duration?: number
   preventDuplicate?: boolean

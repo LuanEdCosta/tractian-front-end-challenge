@@ -8,14 +8,17 @@ import {
   IconButton,
 } from '@mui/material'
 
+import { AssetModel } from 'src/models'
 import { TableParts } from 'src/components'
+import { UseAnchorReturn } from 'src/hooks'
 
 import { UseAssetsReturn } from '../hooks/useAssets.hook'
 
-type AssetsTableProps = Pick<UseAssetsReturn, 'assets'>
+type AssetsTableProps = Pick<UseAssetsReturn, 'assets'> &
+  Pick<UseAnchorReturn<AssetModel>, 'handleSetAnchor'>
 
-export function AssetsTable({ assets }: AssetsTableProps) {
-  const { t } = useTranslation('Assets')
+export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
+  const { t } = useTranslation(['Assets', 'Glossary'])
 
   return (
     <TableParts.Container>
@@ -42,16 +45,17 @@ export function AssetsTable({ assets }: AssetsTableProps) {
                 <TableCell>{asset.id}</TableCell>
                 <TableCell>{asset.status}</TableCell>
                 <TableCell>{asset.name}</TableCell>
+
                 <TableCell>
                   <span>{asset.healthscore}</span>
                   <span>%</span>
                 </TableCell>
 
-                <TableCell>
-                  <IconButton onClick={(e) => e /*handleSetAnchor(e, item)*/}>
+                <TableParts.CellOverLink>
+                  <IconButton onClick={(e) => handleSetAnchor(e, asset)}>
                     <MoreVert />
                   </IconButton>
-                </TableCell>
+                </TableParts.CellOverLink>
               </TableParts.NoWrapRow>
             )
           })}

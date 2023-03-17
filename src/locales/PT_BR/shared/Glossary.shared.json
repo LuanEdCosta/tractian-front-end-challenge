@@ -1,5 +1,8 @@
 {
   "appName": "Asset Management",
   "action": "Ação",
-  "action_plural": "Ações"
+  "action_plural": "Ações",
+  "delete": "Excluir",
+  "edit": "Editar",
+  "cancel": "Cancelar"
 }

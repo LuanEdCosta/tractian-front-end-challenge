@@ -4,24 +4,32 @@
       "generic": "Ocorreu um erro desconhecido"
     },
     "asset": {
-      "findMany": "Erro ao carregar ativos"
+      "findMany": "Erro ao carregar ativos",
+      "delete": "Erro ao excluir ativo"
     },
     "company": {
-      "findMany": "Erro ao carregar empresas"
+      "findMany": "Erro ao carregar empresas",
+      "delete": "Erro ao excluir empresa"
     },
     "unit": {
-      "findMany": "Erro ao carregar unidades"
+      "findMany": "Erro ao carregar unidades",
+      "delete": "Erro ao excluir unidade"
     },
     "user": {
-      "findMany": "Erro ao carregar usuários"
+      "findMany": "Erro ao carregar usuários",
+      "delete": "Erro ao excluir usuário"
     },
     "workOrder": {
-      "findMany": "Erro ao carregar ordens de serviço"
+      "findMany": "Erro ao carregar ordens de serviço",
+      "delete": "Erro ao excluir ordem de serviço"
     }
   },
   "success": {
     "general": {
       "generic": "Operação terminou com sucesso"
+    },
+    "asset": {
+      "delete": "Ativo excluído"
     }
   }
 }

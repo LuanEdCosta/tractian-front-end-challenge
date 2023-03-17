@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 
-export type UseAnchorData<T = object> = {
+type UseAnchorData<T = object> = {
   data: T
   visible: boolean
   anchor: HTMLElement

@@ -1,4 +1,5 @@
 {
   "errorOcurred": "Ocorreu um erro",
-  "reloadPage": "Recarregar página"
+  "reloadPage": "Recarregar página",
+  "pagination": "{{from}}-{{to}} Itens de {{total}}"
 }

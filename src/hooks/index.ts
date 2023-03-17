@@ -1,3 +1,5 @@
 export * from './useNotify.hook'
 export * from './useAnchor.hook'
 export * from './useBoolean.hook'
+export * from './usePagination.hook'
+export * from './useNumberOfPages.hook'

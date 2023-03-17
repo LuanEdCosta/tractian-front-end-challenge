@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next'
 
+import { useNumberOfPages, usePagination } from 'src/hooks'
 import { DocumentTitle, PageLayout } from 'src/components'
 
+import { INITIAL_PAGE, PAGE_SIZE } from './Assets.config'
 import { useAssets } from './hooks/useAssets.hook'
 import { useDeleteAsset } from './hooks/useDeleteAsset.hook'
 import { useAssetActions } from './hooks/useAssetActions.hook'
@@ -11,6 +13,7 @@ import { AssetActions } from './components/AssetActions.component'
 import { AssetsFilters } from './components/AssetsFilters.component'
 import { AssetsSkeleton } from './components/AssetsSkeleton.component'
 import { DeleteAssetModal } from './components/DeleteAssetModal.component'
+import { AssetsPagination } from './components/AssetsPagination.component'
 
 export function AssetsPage() {
   const { t } = useTranslation('Assets')
@@ -24,7 +27,15 @@ export function AssetsPage() {
     handleCloseDeleteModal,
   } = useAssetActions()
 
-  const { assets, isLoadingAssets } = useAssets()
+  const { page, setPage } = usePagination(INITIAL_PAGE)
+
+  const { assets, isLoadingAssets, totalAssets } = useAssets({
+    page,
+    pageSize: PAGE_SIZE,
+  })
+
+  const { numberOfPages } = useNumberOfPages(totalAssets, PAGE_SIZE)
+
   const { handleDeleteAsset } = useDeleteAsset(anchor?.data.id ?? 0)
 
   return (
@@ -52,11 +63,19 @@ export function AssetsPage() {
         {(() => {
           if (isLoadingAssets) return <AssetsSkeleton />
           else if (assets.length === 0) return <AssetsEmpty />
-
           return (
             <AssetsTable assets={assets} handleSetAnchor={handleSetAnchor} />
           )
         })()}
+
+        <AssetsPagination
+          page={page}
+          total={totalAssets}
+          pageSize={PAGE_SIZE}
+          isLoading={isLoadingAssets}
+          numberOfPages={numberOfPages}
+          handleChangePage={setPage}
+        />
       </PageLayout.Content>
     </PageLayout.Container>
   )

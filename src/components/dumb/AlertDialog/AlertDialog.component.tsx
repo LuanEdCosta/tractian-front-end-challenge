@@ -25,7 +25,7 @@ type AlertDialogProps = {
   handleCancel?: () => void
 }
 
-export const AlertDialog: React.FC<AlertDialogProps> = ({
+export function AlertDialog({
   open,
   title,
   message,
@@ -39,7 +39,7 @@ export const AlertDialog: React.FC<AlertDialogProps> = ({
   handleClose,
   handleCancel,
   handleConfirm,
-}) => {
+}: AlertDialogProps) {
   const id = useId()
 
   const handleCancelDialog = () => {

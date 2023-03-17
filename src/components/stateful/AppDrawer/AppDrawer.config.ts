@@ -7,7 +7,7 @@ type DrawerItem = {
   Icon: SvgIconComponent
 }
 
-export const DRAWER_WIDTH = 325
+export const DRAWER_WIDTH = 300
 
 export const DRAWER_ITEMS: DrawerItem[] = [
   {

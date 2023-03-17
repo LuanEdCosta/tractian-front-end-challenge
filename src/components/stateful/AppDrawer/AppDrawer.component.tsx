@@ -18,11 +18,11 @@ type AppDrawerProps = {
   handleToggleDrawer: () => void
 }
 
-export const AppDrawer: React.FC<AppDrawerProps> = ({
+export function AppDrawer({
   isOpen,
   isPersistentDrawer,
   handleToggleDrawer,
-}) => {
+}: AppDrawerProps) {
   const { t } = useTranslation('Drawer')
   const { pathname } = useLocation()
   const navigate = useNavigate()

@@ -45,6 +45,8 @@ export function AssetsPage() {
       />
 
       <PageLayout.Content>
+        <PageLayout.Title title={t('title')} />
+
         <AssetsFilters />
 
         {(() => {

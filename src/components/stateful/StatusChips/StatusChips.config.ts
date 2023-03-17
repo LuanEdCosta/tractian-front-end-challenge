@@ -1,6 +1,6 @@
 import { ChipProps } from '@mui/material'
 
-export interface StatusChipsProps {
+export type StatusChipsProps = {
   size?: ChipProps['size']
   context?: 'male' | 'female'
 }

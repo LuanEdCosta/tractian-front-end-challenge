@@ -9,7 +9,7 @@ import {
   DialogContentText,
 } from '@mui/material'
 
-interface AlertDialogProps {
+type AlertDialogProps = {
   open: boolean
   title: string
   message: string

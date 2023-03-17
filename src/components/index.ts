@@ -5,4 +5,6 @@ export * from './dumb/AlertDialog'
 export * from './dumb/DocumentTitle'
 export * from './dumb/RouterLinkNoStyles'
 
+export * from './stateful/AppDrawer'
+export * from './stateful/AppNavbar'
 export * from './stateful/StatusChips'

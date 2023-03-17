@@ -9,7 +9,7 @@ import {
 } from '@mui/material'
 
 import { AssetModel } from 'src/models'
-import { TableParts } from 'src/components'
+import { StatusChips, TableParts } from 'src/components'
 import { UseAnchorReturn } from 'src/hooks'
 
 import { UseAssetsReturn } from '../hooks/useAssets.hook'
@@ -43,7 +43,22 @@ export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
                 hideLastRowBorder
               >
                 <TableCell>{asset.id}</TableCell>
-                <TableCell>{asset.status}</TableCell>
+
+                <TableCell>
+                  {(() => {
+                    switch (asset.status) {
+                      case 'inAlert':
+                        return <StatusChips.InAlert />
+                      case 'inDowntime':
+                        return <StatusChips.InDowntime />
+                      case 'inOperation':
+                        return <StatusChips.InOperation />
+                      default:
+                        return asset.status
+                    }
+                  })()}
+                </TableCell>
+
                 <TableCell>{asset.name}</TableCell>
 
                 <TableCell>

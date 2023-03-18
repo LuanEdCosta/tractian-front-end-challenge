@@ -18,7 +18,12 @@ export async function findMany({ page, pageSize }: PaginationParams) {
   }
 }
 
+export async function findById(id: number) {
+  const response = await api.get<AssetModel>(`${id}`)
+  return response.data
+}
+
 export async function deleteById(id: number) {
-  const response = await api.delete<AssetModel>(`/${id}`)
+  const response = await api.delete<AssetModel>(`${id}`)
   return response.data
 }

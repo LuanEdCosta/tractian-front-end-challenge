@@ -1,4 +1,5 @@
 export { default as Assets } from './pages/Assets.page.json'
+export { default as AssetDetails } from './pages/AssetDetails.page.json'
 
 export { default as Common } from './shared/Common.shared.json'
 export { default as Status } from './shared/Status.shared.json'

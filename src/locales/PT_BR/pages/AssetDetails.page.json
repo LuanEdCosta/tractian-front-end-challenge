@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "Detalhes de Ativo",
+  "metrics": {
+    "title": "Métricas"
+  },
+  "panel": {
+    "title": "Informações",
+    "status": "Status",
+    "name": "Nome",
+    "model": "Modelo",
+    "healthScore": "Saúde (em %)"
+  }
+}

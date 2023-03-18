@@ -9,8 +9,8 @@ import {
 } from '@mui/material'
 
 import { AssetModel } from 'src/models'
-import { StatusChips, TableParts } from 'src/components'
 import { UseAnchorReturn } from 'src/hooks'
+import { AssetStatusPresenter, TableParts } from 'src/components'
 
 import { UseAssetsReturn } from '../hooks/useAssets.hook'
 
@@ -45,18 +45,7 @@ export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
                 <TableCell>{asset.id}</TableCell>
 
                 <TableCell>
-                  {(() => {
-                    switch (asset.status) {
-                      case 'inAlert':
-                        return <StatusChips.InAlert />
-                      case 'inDowntime':
-                        return <StatusChips.InDowntime />
-                      case 'inOperation':
-                        return <StatusChips.InOperation />
-                      default:
-                        return asset.status
-                    }
-                  })()}
+                  <AssetStatusPresenter status={asset.status} />
                 </TableCell>
 
                 <TableCell>{asset.name}</TableCell>

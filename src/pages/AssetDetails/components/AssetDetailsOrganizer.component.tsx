@@ -14,7 +14,7 @@ export function AssetDetailsOrganizer({ asset }: AssetDetailsOrganizerProps) {
     <Stack>
       <Grid mx="-1rem !important" spacing={2} wrap="wrap-reverse" container>
         <Grid xs={12} sm={6} md={7} lg={8} item>
-          <AssetDetailsMetrics />
+          <AssetDetailsMetrics asset={asset} />
         </Grid>
 
         <Grid xs={12} sm={6} md={5} lg={4} item>

@@ -2,7 +2,10 @@
   "defaultTitle": "Detalhes de Ativo",
   "loadError": "Não foi possível carregar dados do ativo",
   "metrics": {
-    "title": "Métricas"
+    "title": "Métricas",
+    "totalUptime": "Total de Horas Ligado(a)",
+    "totalCollectsUptime": "Quantidade de Medições",
+    "lastUptimeAt": "Data da Última Medição"
   },
   "panel": {
     "title": "Informações",

@@ -34,6 +34,30 @@ export function AssetDetailsPanel({ asset }: AssetDetailsPanelProps) {
             caption={t('panel.healthScore')}
             text={`${asset.healthscore}%`}
           />
+
+          <TextWithCaption
+            caption={t('panel.sensors')}
+            text={asset.sensors.join(', ')}
+          />
+
+          <TextWithCaption
+            caption={t('panel.maxTemp')}
+            text={`${asset.specifications.maxTemp}º`}
+          />
+
+          {!!asset.specifications.rpm && (
+            <TextWithCaption
+              caption={t('panel.rpm')}
+              text={asset.specifications.rpm}
+            />
+          )}
+
+          {!!asset.specifications.power && (
+            <TextWithCaption
+              caption={t('panel.power')}
+              text={`${asset.specifications.power} kWh`}
+            />
+          )}
         </Stack>
       </Stack>
     </DataGroup>

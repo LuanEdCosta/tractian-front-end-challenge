@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, Stack } from '@mui/material'
 
 import { UseAssetReturn } from '../hooks/useAsset.hook'
 
@@ -11,14 +11,16 @@ type AssetDetailsOrganizerProps = RequiredProperty<
 
 export function AssetDetailsOrganizer({ asset }: AssetDetailsOrganizerProps) {
   return (
-    <Grid spacing={2} wrap="wrap-reverse" container>
-      <Grid xs={12} sm={6} md={7} lg={8} item>
-        <AssetDetailsMetrics />
-      </Grid>
+    <Stack>
+      <Grid mx="-1rem !important" spacing={2} wrap="wrap-reverse" container>
+        <Grid xs={12} sm={6} md={7} lg={8} item>
+          <AssetDetailsMetrics />
+        </Grid>
 
-      <Grid xs={12} sm={6} md={5} lg={4} item>
-        <AssetDetailsPanel asset={asset} />
+        <Grid xs={12} sm={6} md={5} lg={4} item>
+          <AssetDetailsPanel asset={asset} />
+        </Grid>
       </Grid>
-    </Grid>
+    </Stack>
   )
 }

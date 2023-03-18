@@ -1,5 +1,6 @@
 {
   "defaultTitle": "Detalhes de Ativo",
+  "loadError": "Não foi possível carregar dados do ativo",
   "metrics": {
     "title": "Métricas"
   },
@@ -8,6 +9,10 @@
     "status": "Status",
     "name": "Nome",
     "model": "Modelo",
-    "healthScore": "Saúde (em %)"
+    "healthScore": "Saúde (em %)",
+    "sensors": "Sensores",
+    "maxTemp": "Temperatura Máxima (Celsius)",
+    "rpm": "RPM",
+    "power": "Potência (em kWh)"
   }
 }

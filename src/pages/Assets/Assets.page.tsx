@@ -5,6 +5,7 @@ import { DocumentTitle, PageLayout } from 'src/components'
 
 import { INITIAL_PAGE, PAGE_SIZE } from './Assets.config'
 import { useAssets } from './hooks/useAssets.hook'
+import { useFilters } from './hooks/useFilters.hook'
 import { useDeleteAsset } from './hooks/useDeleteAsset.hook'
 import { useAssetActions } from './hooks/useAssetActions.hook'
 import { AssetsTable } from './components/AssetsTable.component'
@@ -27,12 +28,16 @@ export function AssetsPage() {
     handleCloseDeleteModal,
   } = useAssetActions()
 
-  const { page, setPage } = usePagination(INITIAL_PAGE)
+  const { page, setPage, handleResetPage } = usePagination(INITIAL_PAGE)
 
-  const { assets, isLoadingAssets, totalAssets } = useAssets({
-    page,
-    pageSize: PAGE_SIZE,
+  const { currentFilters, register, handleSubmit, handleSearch } = useFilters({
+    handleResetPage,
   })
+
+  const { assets, isLoadingAssets, totalAssets } = useAssets(
+    { page, pageSize: PAGE_SIZE },
+    currentFilters,
+  )
 
   const { numberOfPages } = useNumberOfPages(totalAssets, PAGE_SIZE)
 
@@ -58,7 +63,11 @@ export function AssetsPage() {
       <PageLayout.Content>
         <PageLayout.Title title={t('title')} />
 
-        <AssetsFilters />
+        <AssetsFilters
+          register={register}
+          handleSubmit={handleSubmit}
+          handleSearch={handleSearch}
+        />
 
         {(() => {
           if (isLoadingAssets) return <AssetsSkeleton />

@@ -3934,6 +3934,11 @@ react-helmet@^6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
+react-hook-form@^7.43.7:
+  version "7.43.7"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.43.7.tgz#88b8bc257635d706955e19c05254fb492fa77ad1"
+  integrity sha512-38yehQkQQ5uufaPKFScs7jhLE8n3+LG9H/BZfFAiBL2+7piDmw/BrdNJV4irzMaPnWZGhmGLHVICHXNVGIuXZg==
+
 react-i18next@^12.2.0:
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-12.2.0.tgz#010e3f6070b8d700442947233352ebe4b252d7a1"
@@ -4608,3 +4613,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==

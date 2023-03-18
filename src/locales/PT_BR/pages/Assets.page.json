@@ -1,6 +1,6 @@
 {
   "title": "Ativos",
-  "emptyMessage": "Nenhum ativo para exibir",
+  "emptyMessage": "Nenhum Ativo Encontrado",
   "table": {
     "head": {
       "id": "ID",
@@ -12,5 +12,8 @@
   "deleteModal": {
     "title": "Excluir Ativo",
     "message": "Tem certeza que deseja excluir este ativo?"
+  },
+  "filters": {
+    "searchLabel": "Pesquise um ativo"
   }
 }

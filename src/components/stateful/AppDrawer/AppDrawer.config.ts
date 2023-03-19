@@ -1,6 +1,7 @@
 import {
   People,
   Groups,
+  ListAlt,
   Business,
   SvgIconComponent,
   PrecisionManufacturing,
@@ -39,5 +40,11 @@ export const DRAWER_ITEMS: DrawerItem[] = [
     hidden: false,
     labelKey: 'items.companies',
     Icon: Business,
+  },
+  {
+    to: '/workOrders',
+    hidden: false,
+    labelKey: 'items.workOrders',
+    Icon: ListAlt,
   },
 ]

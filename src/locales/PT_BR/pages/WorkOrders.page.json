@@ -1,0 +1,20 @@
+{
+  "title": "Ordens de Serviço",
+  "emptyMessage": "Nenhuma Ordem de Serviço Encontrada",
+  "table": {
+    "head": {
+      "id": "ID",
+      "title": "Título",
+      "status": "Status",
+      "priority": "Prioridade",
+      "description": "Descrição"
+    }
+  },
+  "deleteModal": {
+    "title": "Excluir Ordem de Serviço",
+    "message": "Tem certeza que deseja excluir esta ordem de serviço?"
+  },
+  "filters": {
+    "searchLabel": "Pesquise uma ordem de serviço"
+  }
+}

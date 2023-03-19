@@ -7,6 +7,7 @@ import {
   AssetsPage,
   NotFoundPage,
   CompaniesPage,
+  WorkOrdersPage,
   AssetDetailsPage,
 } from 'src/pages'
 
@@ -20,6 +21,7 @@ export function AppRoutes() {
           <Route path="/users" element={<UsersPage />} />
           <Route path="/units" element={<UnitsPage />} />
           <Route path="/companies" element={<CompaniesPage />} />
+          <Route path="/workOrders" element={<WorkOrdersPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

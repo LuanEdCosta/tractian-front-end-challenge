@@ -13,3 +13,7 @@ export type UnitFilters = {
 export type CompanyFilters = {
   search?: string
 }
+
+export type WorkOrderFilters = {
+  search?: string
+}

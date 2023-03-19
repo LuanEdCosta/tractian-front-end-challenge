@@ -10,7 +10,6 @@
     },
     "workOrder": {
       "findMany": "Erro ao carregar ordens de serviço",
-      "findById": "Erro ao carregar ordem de serviço",
       "delete": "Erro ao excluir ordem de serviço"
     },
     "company": {
@@ -32,6 +31,9 @@
     },
     "asset": {
       "delete": "Ativo excluído"
+    },
+    "workOrder": {
+      "delete": "Ordem de serviço excluída"
     },
     "user": {
       "delete": "Usuário excluído"

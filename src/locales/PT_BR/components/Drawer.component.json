@@ -3,6 +3,7 @@
     "assets": "Ativos",
     "users": "Usuários",
     "units": "Unidades",
-    "companies": "Empresas"
+    "companies": "Empresas",
+    "workOrders": "Ordens de Serviço"
   }
 }

@@ -27,6 +27,7 @@ export function UsersTable({ users, handleSetAnchor }: UsersTableProps) {
           <TableParts.NoWrapRow>
             <TableCell>{t('table.head.id')}</TableCell>
             <TableCell>{t('table.head.name')}</TableCell>
+            <TableCell>{t('table.head.email')}</TableCell>
             <TableCell>{t('Glossary:action', { count: 100 })}</TableCell>
           </TableParts.NoWrapRow>
         </TableHead>
@@ -37,6 +38,7 @@ export function UsersTable({ users, handleSetAnchor }: UsersTableProps) {
               <TableParts.NoWrapRow key={user.id} hideLastRowBorder>
                 <TableCell>{user.id}</TableCell>
                 <TableCell>{user.name}</TableCell>
+                <TableCell>{user.email}</TableCell>
 
                 <TableCell>
                   <IconButton onClick={(e) => handleSetAnchor(e, user)}>

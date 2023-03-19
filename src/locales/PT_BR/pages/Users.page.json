@@ -4,7 +4,8 @@
   "table": {
     "head": {
       "id": "ID",
-      "name": "Nome"
+      "name": "Nome",
+      "email": "E-mail"
     }
   },
   "deleteModal": {

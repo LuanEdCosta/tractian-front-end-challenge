@@ -1,4 +1,8 @@
-import { PrecisionManufacturing, SvgIconComponent } from '@mui/icons-material'
+import {
+  People,
+  SvgIconComponent,
+  PrecisionManufacturing,
+} from '@mui/icons-material'
 
 type DrawerItem = {
   to: string
@@ -15,5 +19,11 @@ export const DRAWER_ITEMS: DrawerItem[] = [
     hidden: false,
     labelKey: 'items.assets',
     Icon: PrecisionManufacturing,
+  },
+  {
+    to: '/users',
+    hidden: false,
+    labelKey: 'items.users',
+    Icon: People,
   },
 ]

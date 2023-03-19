@@ -35,6 +35,9 @@
     },
     "asset": {
       "delete": "Ativo excluído"
+    },
+    "user": {
+      "delete": "Usuário excluído"
     }
   }
 }

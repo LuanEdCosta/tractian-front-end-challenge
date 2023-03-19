@@ -1,0 +1,17 @@
+{
+  "title": "Usuários",
+  "emptyMessage": "Nenhum Usuário Encontrado",
+  "table": {
+    "head": {
+      "id": "ID",
+      "name": "Nome"
+    }
+  },
+  "deleteModal": {
+    "title": "Excluir Usuário",
+    "message": "Tem certeza que deseja excluir este usuário?"
+  },
+  "filters": {
+    "searchLabel": "Pesquise um usuário"
+  }
+}

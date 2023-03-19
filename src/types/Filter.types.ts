@@ -9,3 +9,7 @@ export type UserFilters = {
 export type UnitFilters = {
   search?: string
 }
+
+export type CompanyFilters = {
+  search?: string
+}

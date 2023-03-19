@@ -1,6 +1,7 @@
 import {
   People,
   Groups,
+  Business,
   SvgIconComponent,
   PrecisionManufacturing,
 } from '@mui/icons-material'
@@ -32,5 +33,11 @@ export const DRAWER_ITEMS: DrawerItem[] = [
     hidden: false,
     labelKey: 'items.units',
     Icon: Groups,
+  },
+  {
+    to: '/companies',
+    hidden: false,
+    labelKey: 'items.companies',
+    Icon: Business,
   },
 ]

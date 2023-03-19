@@ -1,0 +1,17 @@
+{
+  "title": "Empresas",
+  "emptyMessage": "Nenhuma Empresa Encontrada",
+  "table": {
+    "head": {
+      "id": "ID",
+      "name": "Nome"
+    }
+  },
+  "deleteModal": {
+    "title": "Excluir Empresa",
+    "message": "Tem certeza que deseja excluir esta empresa?"
+  },
+  "filters": {
+    "searchLabel": "Pesquise uma empresa"
+  }
+}

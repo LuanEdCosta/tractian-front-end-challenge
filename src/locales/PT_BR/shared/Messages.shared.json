@@ -8,25 +8,22 @@
       "findById": "Erro ao carregar ativo",
       "delete": "Erro ao excluir ativo"
     },
-    "company": {
-      "findMany": "Erro ao carregar empresas",
-      "findById": "Erro ao carregar empresa",
-      "delete": "Erro ao excluir empresa"
-    },
-    "unit": {
-      "findMany": "Erro ao carregar unidades",
-      "findById": "Erro ao carregar unidade",
-      "delete": "Erro ao excluir unidade"
-    },
-    "user": {
-      "findMany": "Erro ao carregar usuários",
-      "findById": "Erro ao carregar usuário",
-      "delete": "Erro ao excluir usuário"
-    },
     "workOrder": {
       "findMany": "Erro ao carregar ordens de serviço",
       "findById": "Erro ao carregar ordem de serviço",
       "delete": "Erro ao excluir ordem de serviço"
+    },
+    "company": {
+      "findMany": "Erro ao carregar empresas",
+      "delete": "Erro ao excluir empresa"
+    },
+    "unit": {
+      "findMany": "Erro ao carregar unidades",
+      "delete": "Erro ao excluir unidade"
+    },
+    "user": {
+      "findMany": "Erro ao carregar usuários",
+      "delete": "Erro ao excluir usuário"
     }
   },
   "success": {
@@ -41,6 +38,9 @@
     },
     "unit": {
       "delete": "Unidade excluída"
+    },
+    "company": {
+      "delete": "Empresa excluída"
     }
   }
 }

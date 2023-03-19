@@ -2,6 +2,7 @@
   "items": {
     "assets": "Ativos",
     "users": "Usuários",
-    "units": "Unidades"
+    "units": "Unidades",
+    "companies": "Empresas"
   }
 }

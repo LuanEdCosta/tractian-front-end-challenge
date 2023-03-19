@@ -15,6 +15,7 @@ import { UnitsFilters } from './components/UnitsFilters.component'
 import { UnitsSkeleton } from './components/UnitsSkeleton.component'
 import { DeleteUnitModal } from './components/DeleteUnitModal.component'
 import { UnitsPagination } from './components/UnitsPagination.component'
+import { UnitPageActions } from './components/UnitPageActions.component'
 
 export function UnitsPage() {
   const { t } = useTranslation('Units')
@@ -61,7 +62,9 @@ export function UnitsPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={t('title')} />
+        <PageLayout.Title title={t('title')}>
+          <UnitPageActions />
+        </PageLayout.Title>
 
         <UnitsFilters
           register={register}

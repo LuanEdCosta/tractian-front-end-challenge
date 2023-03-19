@@ -1,6 +1,9 @@
 {
   "title": "Unidades",
   "emptyMessage": "Nenhuma Unidade Encontrado",
+  "pageActions": {
+    "newUnit": "Nova Unidade"
+  },
   "table": {
     "head": {
       "id": "ID",

@@ -23,7 +23,22 @@ export async function findMany(
   }
 }
 
+export async function findById(id: number) {
+  const response = await api.get<UnitModel>(`${id}`)
+  return response.data
+}
+
 export async function deleteById(id: number) {
   const response = await api.delete<UnitModel>(`${id}`)
+  return response.data
+}
+
+export async function create(data: Pick<UnitModel, 'name'>) {
+  const response = await api.post<UnitModel>('/', data)
+  return response.data
+}
+
+export async function update(id: number, data: Pick<UnitModel, 'name'>) {
+  const response = await api.patch<UnitModel>(`${id}`, data)
   return response.data
 }

@@ -30,19 +30,29 @@
       "generic": "Operação terminou com sucesso"
     },
     "asset": {
-      "delete": "Ativo excluído"
+      "delete": "Ativo excluído",
+      "create": "Ativo criado",
+      "update": "Ativo editado"
     },
     "workOrder": {
-      "delete": "Ordem de serviço excluída"
+      "delete": "Ordem de serviço excluída",
+      "create": "Ordem de serviço criada",
+      "update": "Ordem de serviço editada"
     },
     "user": {
-      "delete": "Usuário excluído"
+      "delete": "Usuário excluído",
+      "create": "Usuário criado",
+      "update": "Usuário editado"
     },
     "unit": {
-      "delete": "Unidade excluída"
+      "delete": "Unidade excluída",
+      "create": "Unidade criada",
+      "update": "Unidade editada"
     },
     "company": {
-      "delete": "Empresa excluída"
+      "delete": "Empresa excluída",
+      "create": "Empresa criada",
+      "update": "Empresa editada"
     }
   }
 }

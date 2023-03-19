@@ -1,6 +1,7 @@
 export { default as Users } from './pages/Users.page.json'
 export { default as Units } from './pages/Units.page.json'
 export { default as Assets } from './pages/Assets.page.json'
+export { default as NotFound } from './pages/NotFound.page.json'
 export { default as Companies } from './pages/Companies.page.json'
 export { default as AssetDetails } from './pages/AssetDetails.page.json'
 

@@ -17,5 +17,8 @@
     "maxTemp": "Temperatura Máxima (Celsius)",
     "rpm": "RPM",
     "power": "Potência (em kWh)"
+  },
+  "healthHistory": {
+    "title": "Histórico de Saúde"
   }
 }

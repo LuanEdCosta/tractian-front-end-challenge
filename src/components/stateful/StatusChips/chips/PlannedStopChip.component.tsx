@@ -1,10 +1,10 @@
 import { Chip } from '@mui/material'
-import { Cancel } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
+import { EventBusy } from '@mui/icons-material'
 
 import { StatusChipsProps } from '../StatusChips.config'
 
-export function InDowntimeChip({ context, size = 'small' }: StatusChipsProps) {
+export function PlannedStopChip({ context, size = 'small' }: StatusChipsProps) {
   const { t } = useTranslation('Status')
 
   return (
@@ -12,12 +12,12 @@ export function InDowntimeChip({ context, size = 'small' }: StatusChipsProps) {
       sx={{
         color: 'white',
         bgcolor(theme) {
-          return theme.palette.inDowntime.main
+          return theme.palette.plannedStop.main
         },
       }}
       size={size}
-      label={t('inDowntime', { context })}
-      icon={<Cancel fontSize="small" color="inherit" />}
+      label={t('plannedStop', { context })}
+      icon={<EventBusy fontSize="small" color="inherit" />}
     />
   )
 }

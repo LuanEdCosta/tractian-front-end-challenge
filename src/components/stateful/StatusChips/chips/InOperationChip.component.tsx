@@ -9,10 +9,15 @@ export function InOperationChip({ context, size = 'small' }: StatusChipsProps) {
 
   return (
     <Chip
+      sx={{
+        color: 'white',
+        bgcolor(theme) {
+          return theme.palette.inOperation.main
+        },
+      }}
       size={size}
-      color="success"
       label={t('inOperation', { context })}
-      icon={<CheckCircle fontSize="small" />}
+      icon={<CheckCircle fontSize="small" color="inherit" />}
     />
   )
 }

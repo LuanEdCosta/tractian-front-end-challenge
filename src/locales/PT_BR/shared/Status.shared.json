@@ -2,7 +2,9 @@
   "inAlert": "Em Alerta",
   "inDowntime": "Em Parada",
   "inOperation": "Em Operação",
+  "plannedStop": "Parada Planejada",
   "unplannedStop": "Parada Não Planejada",
+
   "completed": "Completo",
   "completed_female": "Completa",
   "inProgress": "Em Progresso"

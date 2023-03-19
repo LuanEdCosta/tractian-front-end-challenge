@@ -1,4 +1,9 @@
-type Status = 'inOperation' | 'inDowntime' | 'inAlert' | 'unplannedStop'
+type Status =
+  | 'inAlert'
+  | 'inDowntime'
+  | 'inOperation'
+  | 'plannedStop'
+  | 'unplannedStop'
 
 export type AssetModel = {
   id: number

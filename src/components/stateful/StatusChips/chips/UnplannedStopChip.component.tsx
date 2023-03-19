@@ -12,10 +12,15 @@ export function UnplannedStopChip({
 
   return (
     <Chip
+      sx={{
+        color: 'white',
+        bgcolor(theme) {
+          return theme.palette.unplannedStop.main
+        },
+      }}
       size={size}
-      color="error"
       label={t('unplannedStop', { context })}
-      icon={<DoNotTouch fontSize="small" />}
+      icon={<DoNotTouch fontSize="small" color="inherit" />}
     />
   )
 }

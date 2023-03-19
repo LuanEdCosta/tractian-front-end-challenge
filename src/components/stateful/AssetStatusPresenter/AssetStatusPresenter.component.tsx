@@ -14,6 +14,8 @@ export function AssetStatusPresenter({ status }: AssetStatusPresenterProps) {
       return <StatusChips.InDowntime />
     case 'inOperation':
       return <StatusChips.InOperation />
+    case 'plannedStop':
+      return <StatusChips.PlannedStop />
     case 'unplannedStop':
       return <StatusChips.UnplannedStop />
     default:

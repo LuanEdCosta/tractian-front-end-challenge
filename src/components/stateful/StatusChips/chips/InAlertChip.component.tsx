@@ -9,10 +9,15 @@ export function InAlertChip({ context, size = 'small' }: StatusChipsProps) {
 
   return (
     <Chip
+      sx={{
+        color: 'white',
+        bgcolor(theme) {
+          return theme.palette.inAlert.main
+        },
+      }}
       size={size}
-      color="warning"
       label={t('inAlert', { context })}
-      icon={<Report fontSize="small" />}
+      icon={<Report fontSize="small" color="inherit" />}
     />
   )
 }

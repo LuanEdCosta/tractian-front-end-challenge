@@ -5,3 +5,7 @@ export type AssetFilters = {
 export type UserFilters = {
   search?: string
 }
+
+export type UnitFilters = {
+  search?: string
+}

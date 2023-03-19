@@ -1,0 +1,17 @@
+{
+  "title": "Unidades",
+  "emptyMessage": "Nenhuma Unidade Encontrado",
+  "table": {
+    "head": {
+      "id": "ID",
+      "name": "Nome"
+    }
+  },
+  "deleteModal": {
+    "title": "Excluir Unidade",
+    "message": "Tem certeza que deseja excluir esta unidade?"
+  },
+  "filters": {
+    "searchLabel": "Pesquise uma unidade"
+  }
+}

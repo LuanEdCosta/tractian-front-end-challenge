@@ -1,6 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { AssetDetailsPage, AssetsPage, MainPage, UsersPage } from 'src/pages'
+import {
+  MainPage,
+  UnitsPage,
+  UsersPage,
+  AssetsPage,
+  AssetDetailsPage,
+} from 'src/pages'
 
 export function AppRoutes() {
   return (
@@ -9,8 +15,8 @@ export function AppRoutes() {
         <Route path="/" element={<MainPage />}>
           <Route index element={<AssetsPage />} />
           <Route path="/assets/:id" element={<AssetDetailsPage />} />
-
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/units" element={<UnitsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

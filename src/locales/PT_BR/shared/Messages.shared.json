@@ -38,6 +38,9 @@
     },
     "user": {
       "delete": "Usuário excluído"
+    },
+    "unit": {
+      "delete": "Unidade excluída"
     }
   }
 }

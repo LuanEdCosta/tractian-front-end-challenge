@@ -1,3 +1,4 @@
 {
-  "emptyField": "Preencha este campo"
+  "emptyField": "Preencha este campo",
+  "invalidEmail": "E-mail inválido"
 }

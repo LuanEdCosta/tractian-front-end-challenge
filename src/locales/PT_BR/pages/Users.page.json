@@ -1,6 +1,9 @@
 {
   "title": "Usuários",
   "emptyMessage": "Nenhum Usuário Encontrado",
+  "pageActions": {
+    "newUser": "Novo Usuário"
+  },
   "table": {
     "head": {
       "id": "ID",

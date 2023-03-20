@@ -11,6 +11,7 @@ import {
   CreateUnitPage,
   AssetDetailsPage,
   CreateCompanyPage,
+  CreateUserPage,
 } from 'src/pages'
 
 export function AppRoutes() {
@@ -20,7 +21,13 @@ export function AppRoutes() {
         <Route path="/" element={<MainPage />}>
           <Route index element={<AssetsPage />} />
           <Route path="/assets/:id" element={<AssetDetailsPage />} />
+
           <Route path="/users" element={<UsersPage />} />
+          <Route path="/users/create" element={<CreateUserPage />} />
+          <Route
+            path="/users/:id/edit"
+            element={<CreateUserPage key="EditUserPage" />}
+          />
 
           <Route path="/units" element={<UnitsPage />} />
           <Route path="/units/create" element={<CreateUnitPage />} />

@@ -15,6 +15,7 @@ import { UsersFilters } from './components/UsersFilters.component'
 import { UsersSkeleton } from './components/UsersSkeleton.component'
 import { DeleteUserModal } from './components/DeleteUserModal.component'
 import { UsersPagination } from './components/UsersPagination.component'
+import { UserPageActions } from './components/UserPageActions.component'
 
 export function UsersPage() {
   const { t } = useTranslation('Users')
@@ -61,7 +62,9 @@ export function UsersPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={t('title')} />
+        <PageLayout.Title title={t('title')}>
+          <UserPageActions />
+        </PageLayout.Title>
 
         <UsersFilters
           register={register}

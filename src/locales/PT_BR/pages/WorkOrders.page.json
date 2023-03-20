@@ -16,5 +16,8 @@
   },
   "filters": {
     "searchLabel": "Pesquise uma ordem de serviço"
+  },
+  "actions": {
+    "seeLinkedAsset": "Ver Ativo Vinculado"
   }
 }

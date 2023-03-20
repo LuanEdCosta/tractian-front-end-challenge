@@ -37,6 +37,10 @@ export function WorkOrderActions({
         <RouterLinkNoStyles to={`/workOrders/${anchor?.data.id}/edit`}>
           <MenuItem>{t('Glossary:edit')}</MenuItem>
         </RouterLinkNoStyles>
+
+        <RouterLinkNoStyles to={`/assets/${anchor?.data.assetId}`}>
+          <MenuItem>{t('actions.seeLinkedAsset')}</MenuItem>
+        </RouterLinkNoStyles>
       </Menu>
     </>
   )

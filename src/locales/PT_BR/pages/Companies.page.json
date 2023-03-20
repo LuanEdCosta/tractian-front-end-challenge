@@ -1,6 +1,9 @@
 {
   "title": "Empresas",
   "emptyMessage": "Nenhuma Empresa Encontrada",
+  "pageActions": {
+    "newCompany": "Nova Empresa"
+  },
   "table": {
     "head": {
       "id": "ID",

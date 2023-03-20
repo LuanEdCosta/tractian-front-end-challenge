@@ -14,6 +14,7 @@ import { CompanyActions } from './components/CompanyActions.component'
 import { CompaniesFilters } from './components/CompaniesFilters.component'
 import { CompaniesSkeleton } from './components/CompaniesSkeleton.component'
 import { DeleteCompanyModal } from './components/DeleteCompanyModal.component'
+import { CompanyPageActions } from './components/CompanyPageActions.component'
 import { CompaniesPagination } from './components/CompaniesPagination.component'
 
 export function CompaniesPage() {
@@ -61,7 +62,9 @@ export function CompaniesPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={t('title')} />
+        <PageLayout.Title title={t('title')}>
+          <CompanyPageActions />
+        </PageLayout.Title>
 
         <CompaniesFilters
           register={register}

@@ -6,23 +6,37 @@
     "asset": {
       "findMany": "Erro ao carregar ativos",
       "findById": "Erro ao carregar ativo",
-      "delete": "Erro ao excluir ativo"
+      "delete": "Erro ao excluir ativo",
+      "create": "Erro ao criar ativo",
+      "update": "Erro ao editar ativo"
     },
     "workOrder": {
       "findMany": "Erro ao carregar ordens de serviço",
-      "delete": "Erro ao excluir ordem de serviço"
+      "findById": "Erro ao carregar ordem de serviço",
+      "delete": "Erro ao excluir ordem de serviço",
+      "create": "Erro ao criar ordem de serviço",
+      "update": "Erro ao editar ordem de serviço"
     },
     "company": {
       "findMany": "Erro ao carregar empresas",
-      "delete": "Erro ao excluir empresa"
+      "findById": "Erro ao carregar empresa",
+      "delete": "Erro ao excluir empresa",
+      "create": "Erro ao criar empresa",
+      "update": "Erro ao editar empresa"
     },
     "unit": {
       "findMany": "Erro ao carregar unidades",
-      "delete": "Erro ao excluir unidade"
+      "findById": "Erro ao carregar unidade",
+      "delete": "Erro ao excluir unidade",
+      "create": "Erro ao criar unidade",
+      "update": "Erro ao editar unidade"
     },
     "user": {
       "findMany": "Erro ao carregar usuários",
-      "delete": "Erro ao excluir usuário"
+      "findById": "Erro ao carregar usuário",
+      "delete": "Erro ao excluir usuário",
+      "create": "Erro ao criar usuário",
+      "update": "Erro ao editar usuário"
     }
   },
   "success": {

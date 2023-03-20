@@ -5,6 +5,7 @@ export { default as NotFound } from './pages/NotFound.page.json'
 export { default as Companies } from './pages/Companies.page.json'
 export { default as WorkOrders } from './pages/WorkOrders.page.json'
 export { default as CreateUnit } from './pages/CreateUnit.page.json'
+export { default as CreateCompany } from './pages/CreateCompany.page.json'
 export { default as AssetDetails } from './pages/AssetDetails.page.json'
 
 export { default as Common } from './shared/Common.shared.json'

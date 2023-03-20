@@ -1,13 +1,22 @@
 import { Link } from 'react-router-dom'
-import { Button, Stack } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Delete, Edit } from '@mui/icons-material'
+import { Button, CircularProgress, Stack } from '@mui/material'
 
-type AssetDetailsActionsProps = {
+import { UseDeleteAssetReturn } from '../hooks/useDeleteAsset.hook'
+
+type AssetDetailsActionsProps = Pick<
+  UseDeleteAssetReturn,
+  'handleOpenDeleteModal' | 'isDeletingAsset'
+> & {
   id: string
 }
 
-export function AssetDetailsActions({ id }: AssetDetailsActionsProps) {
+export function AssetDetailsActions({
+  id,
+  isDeletingAsset,
+  handleOpenDeleteModal,
+}: AssetDetailsActionsProps) {
   const { t } = useTranslation('AssetDetails')
 
   return (
@@ -21,7 +30,19 @@ export function AssetDetailsActions({ id }: AssetDetailsActionsProps) {
         {t('Glossary:edit')}
       </Button>
 
-      <Button variant="contained" color="error" endIcon={<Delete />}>
+      <Button
+        color="error"
+        variant="contained"
+        disabled={isDeletingAsset}
+        onClick={handleOpenDeleteModal}
+        endIcon={
+          isDeletingAsset ? (
+            <CircularProgress size="1rem" color="inherit" />
+          ) : (
+            <Delete />
+          )
+        }
+      >
         {t('Glossary:delete')}
       </Button>
     </Stack>

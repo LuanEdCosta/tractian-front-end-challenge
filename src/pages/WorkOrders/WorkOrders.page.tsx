@@ -4,8 +4,9 @@ import { useNumberOfPages, usePagination } from 'src/hooks'
 import { DocumentTitle, PageLayout } from 'src/components'
 
 import { INITIAL_PAGE, PAGE_SIZE } from './WorkOrders.config'
-import { useWorkOrders } from './hooks/useWorkOrders.hook'
 import { useFilters } from './hooks/useFilters.hook'
+import { useWorkOrders } from './hooks/useWorkOrders.hook'
+import { useTasksModal } from './hooks/useTasksModal.hook'
 import { useDeleteWorkOrder } from './hooks/useDeleteWorkOrder.hook'
 import { useWorkOrderActions } from './hooks/useWorkOrderActions.hook'
 import { WorkOrdersTable } from './components/WorkOrdersTable.component'
@@ -15,6 +16,7 @@ import { WorkOrdersFilters } from './components/WorkOrdersFilters.component'
 import { WorkOrdersSkeleton } from './components/WorkOrdersSkeleton.component'
 import { DeleteWorkOrderModal } from './components/DeleteWorkOrderModal.component'
 import { WorkOrdersPagination } from './components/WorkOrdersPagination.component'
+import { TasksModal } from './components/TasksModal.component'
 
 export function WorkOrdersPage() {
   const { t } = useTranslation('WorkOrders')
@@ -29,7 +31,6 @@ export function WorkOrdersPage() {
   } = useWorkOrderActions()
 
   const { page, setPage, handleResetPage } = usePagination(INITIAL_PAGE)
-
   const { currentFilters, register, handleSubmit, handleSearch } = useFilters({
     handleResetPage,
   })
@@ -40,8 +41,15 @@ export function WorkOrdersPage() {
   )
 
   const { numberOfPages } = useNumberOfPages(totalWorkOrders, PAGE_SIZE)
-
   const { handleDeleteWorkOrder } = useDeleteWorkOrder(anchor?.data.id ?? 0)
+
+  const {
+    tasks,
+    workOrderTile,
+    isShowingTasksModal,
+    handleOpenTasksModal,
+    handleCloseTasksModal,
+  } = useTasksModal()
 
   return (
     <PageLayout.Container>
@@ -60,6 +68,13 @@ export function WorkOrdersPage() {
         handleCloseDeleteModal={handleCloseDeleteModal}
       />
 
+      <TasksModal
+        tasks={tasks}
+        workOrderTile={workOrderTile}
+        isShowingTasksModal={isShowingTasksModal}
+        handleCloseTasksModal={handleCloseTasksModal}
+      />
+
       <PageLayout.Content>
         <PageLayout.Title title={t('title')} />
 
@@ -76,6 +91,7 @@ export function WorkOrdersPage() {
             <WorkOrdersTable
               workOrders={workOrders}
               handleSetAnchor={handleSetAnchor}
+              handleOpenTasksModal={handleOpenTasksModal}
             />
           )
         })()}

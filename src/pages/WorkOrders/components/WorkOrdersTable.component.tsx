@@ -8,6 +8,7 @@ import {
   TableCell,
   TableHead,
   IconButton,
+  Button,
 } from '@mui/material'
 
 import { WorkOrderModel } from 'src/models'
@@ -15,15 +16,18 @@ import { UseAnchorReturn } from 'src/hooks'
 import { TableParts, WorkOrderStatusPresenter } from 'src/components'
 
 import { UseWorkOrdersReturn } from '../hooks/useWorkOrders.hook'
+import { UseTasksModalReturn } from '../hooks/useTasksModal.hook'
 
 type WorkOrdersTableProps = Pick<UseWorkOrdersReturn, 'workOrders'> &
-  Pick<UseAnchorReturn<WorkOrderModel>, 'handleSetAnchor'>
+  Pick<UseAnchorReturn<WorkOrderModel>, 'handleSetAnchor'> &
+  Pick<UseTasksModalReturn, 'handleOpenTasksModal'>
 
 const MAX_ROW_LENGTH = 50
 
 export function WorkOrdersTable({
   workOrders,
   handleSetAnchor,
+  handleOpenTasksModal,
 }: WorkOrdersTableProps) {
   const { t } = useTranslation(['WorkOrders', 'Glossary', 'WorkOrderPriority'])
 
@@ -37,6 +41,7 @@ export function WorkOrdersTable({
             <TableCell>{t('table.head.title')}</TableCell>
             <TableCell>{t('table.head.priority')}</TableCell>
             <TableCell>{t('table.head.description')}</TableCell>
+            <TableCell>{t('table.head.openTasksModal')}</TableCell>
             <TableCell>{t('Glossary:action', { count: 100 })}</TableCell>
           </TableParts.NoWrapRow>
         </TableHead>
@@ -74,6 +79,15 @@ export function WorkOrdersTable({
                   ) : (
                     workOrder.description
                   )}
+                </TableCell>
+
+                <TableCell>
+                  <Button
+                    size="small"
+                    onClick={() => handleOpenTasksModal(workOrder)}
+                  >
+                    {t('table.body.openTasksModal')}
+                  </Button>
                 </TableCell>
 
                 <TableCell>

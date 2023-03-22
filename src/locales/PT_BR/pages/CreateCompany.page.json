@@ -2,6 +2,6 @@
   "title": "Criar Empresa",
   "updateTitle": "Editar Empresa",
   "form": {
-    "nameLabel": "Nome da Empresa"
+    "nameLabel": "Nome"
   }
 }

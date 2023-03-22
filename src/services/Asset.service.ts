@@ -32,3 +32,24 @@ export async function deleteById(id: number) {
   const response = await api.delete<AssetModel>(`${id}`)
   return response.data
 }
+
+export async function create(data: Pick<AssetModel, 'name'>) {
+  const response = await api.post<AssetModel>('/', data)
+  return response.data
+}
+
+export async function update(
+  id: number,
+  data: Omit<
+    AssetModel,
+    | 'id'
+    | 'healthscore'
+    | 'healthHistory'
+    | 'metrics'
+    | 'image'
+    | 'specifications'
+  >,
+) {
+  const response = await api.patch<AssetModel>(`${id}`, data)
+  return response.data
+}

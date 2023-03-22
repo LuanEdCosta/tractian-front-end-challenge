@@ -1,6 +1,9 @@
 {
   "title": "Ativos",
   "emptyMessage": "Nenhum Ativo Encontrado",
+  "pageActions": {
+    "newAsset": "Novo Ativo"
+  },
   "table": {
     "head": {
       "id": "ID",

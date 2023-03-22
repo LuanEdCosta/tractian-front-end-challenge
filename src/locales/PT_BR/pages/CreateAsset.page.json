@@ -1,0 +1,8 @@
+{
+  "title": "Criar Ativo",
+  "updateTitle": "Editar Ativo",
+  "form": {
+    "nameLabel": "Nome",
+    "modelLabel": "Modelo"
+  }
+}

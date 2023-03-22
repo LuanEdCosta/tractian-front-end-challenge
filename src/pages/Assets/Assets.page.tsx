@@ -15,6 +15,7 @@ import { AssetsFilters } from './components/AssetsFilters.component'
 import { AssetsSkeleton } from './components/AssetsSkeleton.component'
 import { DeleteAssetModal } from './components/DeleteAssetModal.component'
 import { AssetsPagination } from './components/AssetsPagination.component'
+import { AssetsPageActions } from './components/AssetsPageActions.component'
 
 export function AssetsPage() {
   const { t } = useTranslation('Assets')
@@ -61,7 +62,9 @@ export function AssetsPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={t('title')} />
+        <PageLayout.Title title={t('title')}>
+          <AssetsPageActions />
+        </PageLayout.Title>
 
         <AssetsFilters
           register={register}

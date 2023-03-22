@@ -2,7 +2,7 @@
   "title": "Criar Usuário",
   "updateTitle": "Editar Usuário",
   "form": {
-    "nameLabel": "Nome da Usuário",
-    "emailLabel": "E-mail da Usuário"
+    "nameLabel": "Nome",
+    "emailLabel": "E-mail"
   }
 }

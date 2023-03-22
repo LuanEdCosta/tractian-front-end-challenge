@@ -1,0 +1,10 @@
+{
+  "title": "Criar Ordem de Serviço",
+  "updateTitle": "Editar Ordem de Serviço",
+  "form": {
+    "titleLabel": "Título",
+    "descriptionLabel": "Descrição",
+    "priorityLabel": "Prioridade",
+    "statusLabel": "Status"
+  }
+}

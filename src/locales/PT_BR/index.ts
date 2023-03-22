@@ -8,6 +8,7 @@ export { default as CreateUnit } from './pages/CreateUnit.page.json'
 export { default as CreateUser } from './pages/CreateUser.page.json'
 export { default as AssetDetails } from './pages/AssetDetails.page.json'
 export { default as CreateCompany } from './pages/CreateCompany.page.json'
+export { default as CreateWorkOrder } from './pages/CreateWorkOrder.page.json'
 
 export { default as Common } from './shared/Common.shared.json'
 export { default as Status } from './shared/Status.shared.json'

@@ -12,6 +12,7 @@ import {
   AssetDetailsPage,
   CreateCompanyPage,
   CreateUserPage,
+  CreateWorkOrderPage,
 } from 'src/pages'
 
 export function AppRoutes() {
@@ -44,6 +45,12 @@ export function AppRoutes() {
           />
 
           <Route path="/workOrders" element={<WorkOrdersPage />} />
+          <Route path="/workOrders/create" element={<CreateWorkOrderPage />} />
+          <Route
+            path="/workOrders/:id/edit"
+            element={<CreateWorkOrderPage key="EditWorkOrderPage" />}
+          />
+
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

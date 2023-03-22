@@ -26,5 +26,8 @@
   },
   "tasksModal": {
     "title": "Tarefas - {{workOrderTile}}"
+  },
+  "pageActions": {
+    "newWorkOrder": "Nova Ordem de Serviço"
   }
 }

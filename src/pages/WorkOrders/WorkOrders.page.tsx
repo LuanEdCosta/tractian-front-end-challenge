@@ -9,6 +9,7 @@ import { useWorkOrders } from './hooks/useWorkOrders.hook'
 import { useTasksModal } from './hooks/useTasksModal.hook'
 import { useDeleteWorkOrder } from './hooks/useDeleteWorkOrder.hook'
 import { useWorkOrderActions } from './hooks/useWorkOrderActions.hook'
+import { TasksModal } from './components/TasksModal.component'
 import { WorkOrdersTable } from './components/WorkOrdersTable.component'
 import { WorkOrdersEmpty } from './components/WorkOrdersEmpty.component'
 import { WorkOrderActions } from './components/WorkOrderActions.component'
@@ -16,7 +17,7 @@ import { WorkOrdersFilters } from './components/WorkOrdersFilters.component'
 import { WorkOrdersSkeleton } from './components/WorkOrdersSkeleton.component'
 import { DeleteWorkOrderModal } from './components/DeleteWorkOrderModal.component'
 import { WorkOrdersPagination } from './components/WorkOrdersPagination.component'
-import { TasksModal } from './components/TasksModal.component'
+import { WorkOrderPageActions } from './components/WorkOrderPageActions.component'
 
 export function WorkOrdersPage() {
   const { t } = useTranslation('WorkOrders')
@@ -76,7 +77,9 @@ export function WorkOrdersPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={t('title')} />
+        <PageLayout.Title title={t('title')}>
+          <WorkOrderPageActions />
+        </PageLayout.Title>
 
         <WorkOrdersFilters
           register={register}

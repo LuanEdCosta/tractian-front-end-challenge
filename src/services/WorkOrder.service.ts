@@ -23,7 +23,22 @@ export async function findMany(
   }
 }
 
+export async function findById(id: number) {
+  const response = await api.get<WorkOrderModel>(`${id}`)
+  return response.data
+}
+
 export async function deleteById(id: number) {
   const response = await api.delete<WorkOrderModel>(`${id}`)
+  return response.data
+}
+
+export async function create(data: Omit<WorkOrderModel, 'id'>) {
+  const response = await api.post<WorkOrderModel>('/', data)
+  return response.data
+}
+
+export async function update(id: number, data: Omit<WorkOrderModel, 'id'>) {
+  const response = await api.patch<WorkOrderModel>(`${id}`, data)
   return response.data
 }

@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom'
 import { DocumentTitle, PageLayout } from 'src/components'
 
 import { useAsset } from './hooks/useAsset.hook'
+import { useDeleteAsset } from './hooks/useDeleteAsset.hook'
 import { DeleteAssetModal } from './components/DeleteAssetModal.component'
 import { AssetDetailsError } from './components/AssetDetailsError.component'
 import { AssetDetailsActions } from './components/AssetDetailsActions.component'
 import { AssetDetailsSkeleton } from './components/AssetDetailsSkeleton.component'
 import { AssetDetailsOrganizer } from './components/AssetDetailsOrganizer.component'
-import { useDeleteAsset } from './hooks/useDeleteAsset.hook'
 
 export function AssetDetailsPage() {
   const { t } = useTranslation(['AssetDetails', 'Common', 'Glossary'])
@@ -40,7 +40,6 @@ export function AssetDetailsPage() {
         <PageLayout.Title title={title} backButtonLink="..">
           {asset && (
             <AssetDetailsActions
-              id={id}
               isDeletingAsset={isDeletingAsset}
               handleOpenDeleteModal={handleOpenDeleteModal}
             />

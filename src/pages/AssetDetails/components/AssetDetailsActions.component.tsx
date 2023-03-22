@@ -8,12 +8,9 @@ import { UseDeleteAssetReturn } from '../hooks/useDeleteAsset.hook'
 type AssetDetailsActionsProps = Pick<
   UseDeleteAssetReturn,
   'handleOpenDeleteModal' | 'isDeletingAsset'
-> & {
-  id: string
-}
+>
 
 export function AssetDetailsActions({
-  id,
   isDeletingAsset,
   handleOpenDeleteModal,
 }: AssetDetailsActionsProps) {
@@ -21,12 +18,7 @@ export function AssetDetailsActions({
 
   return (
     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2 }}>
-      <Button
-        component={Link}
-        to={`/edit/${id}`}
-        endIcon={<Edit />}
-        variant="contained"
-      >
+      <Button component={Link} to="edit" endIcon={<Edit />} variant="contained">
         {t('Glossary:edit')}
       </Button>
 

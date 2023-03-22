@@ -57,7 +57,7 @@ export function AppDrawer({
           const { Icon } = item
           const isSelected = pathname === item.to
 
-          const handleNavigate = () => {
+          function handleNavigate() {
             navigate(item.to)
             if (!isPersistentDrawer) handleToggleDrawer()
           }

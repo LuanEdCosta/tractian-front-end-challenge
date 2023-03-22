@@ -22,7 +22,7 @@ export function PageLayoutTitle({
   breakPoint = 'sm',
   backButtonLink,
 }: PageLayoutTitleProps) {
-  const handleGetDirection = (): StackProps['direction'] => {
+  function handleGetDirection(): StackProps['direction'] {
     if (breakPoint === 'sm') return { xs: 'column', sm: 'row', md: 'row' }
     return { xs: 'column', sm: 'column', md: 'row' }
   }

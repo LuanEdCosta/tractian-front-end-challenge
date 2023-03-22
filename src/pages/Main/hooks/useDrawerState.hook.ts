@@ -15,11 +15,11 @@ export const useDrawerState = () => {
     theme.breakpoints.down('lg'),
   )
 
-  const handleGetContentMarginLeft = (): string | undefined => {
+  function handleGetContentMarginLeft(): string | undefined {
     if (isPersistentDrawer) return `${isDrawerOpen ? DRAWER_WIDTH : 0}px`
   }
 
-  const handleToggleDrawer = () => {
+  function handleToggleDrawer() {
     setIsDrawerOpen((isOpen) => !isOpen)
   }
 

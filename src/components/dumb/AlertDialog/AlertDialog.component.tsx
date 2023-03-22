@@ -42,12 +42,12 @@ export function AlertDialog({
 }: AlertDialogProps) {
   const id = useId()
 
-  const handleCancelDialog = () => {
+  function handleCancelDialog() {
     if (handleCancel) handleCancel()
     if (shouldCloseWhenCancel) handleClose()
   }
 
-  const handleConfirmDialog = () => {
+  function handleConfirmDialog() {
     if (handleConfirm) handleConfirm()
     if (shouldCloseWhenConfirm) handleClose()
   }

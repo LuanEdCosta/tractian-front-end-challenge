@@ -6,5 +6,5 @@ export function findMany(resource: Resource, ...params: Param[]) {
 }
 
 export function findById(resource: Resource, id: number) {
-  return [`${resource}.findMany`, id]
+  return [`${resource}.findById`, id]
 }

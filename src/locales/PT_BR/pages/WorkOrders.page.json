@@ -8,6 +8,7 @@
       "status": "Status",
       "priority": "Prioridade",
       "description": "Descrição",
+      "users": "Responsáveis",
       "openTasksModal": "Tarefas"
     },
     "body": {

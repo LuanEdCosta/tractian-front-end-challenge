@@ -4,6 +4,7 @@ import { useNumberOfPages, usePagination } from 'src/hooks'
 import { DocumentTitle, PageLayout } from 'src/components'
 
 import { INITIAL_PAGE, PAGE_SIZE } from './WorkOrders.config'
+import { useUsers } from './hooks/useUsers.hook'
 import { useFilters } from './hooks/useFilters.hook'
 import { useWorkOrders } from './hooks/useWorkOrders.hook'
 import { useTasksModal } from './hooks/useTasksModal.hook'
@@ -52,6 +53,8 @@ export function WorkOrdersPage() {
     handleCloseTasksModal,
   } = useTasksModal()
 
+  const { users, isLoadingUsers } = useUsers()
+
   return (
     <PageLayout.Container>
       <DocumentTitle title={t('title')} />
@@ -92,7 +95,9 @@ export function WorkOrdersPage() {
           else if (workOrders.length === 0) return <WorkOrdersEmpty />
           return (
             <WorkOrdersTable
+              users={users}
               workOrders={workOrders}
+              isLoadingUsers={isLoadingUsers}
               handleSetAnchor={handleSetAnchor}
               handleOpenTasksModal={handleOpenTasksModal}
             />

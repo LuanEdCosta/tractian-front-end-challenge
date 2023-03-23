@@ -3,29 +3,37 @@ import { MoreVert } from '@mui/icons-material'
 import {
   Stack,
   Table,
+  Button,
   Tooltip,
   TableBody,
   TableCell,
   TableHead,
   IconButton,
-  Button,
 } from '@mui/material'
 
 import { WorkOrderModel } from 'src/models'
 import { UseAnchorReturn } from 'src/hooks'
-import { TableParts, WorkOrderStatusPresenter } from 'src/components'
+import {
+  TableParts,
+  AssignedUsers,
+  WorkOrderStatusPresenter,
+} from 'src/components'
 
+import { UseUsersReturn } from '../hooks/useUsers.hook'
 import { UseWorkOrdersReturn } from '../hooks/useWorkOrders.hook'
 import { UseTasksModalReturn } from '../hooks/useTasksModal.hook'
 
 type WorkOrdersTableProps = Pick<UseWorkOrdersReturn, 'workOrders'> &
   Pick<UseAnchorReturn<WorkOrderModel>, 'handleSetAnchor'> &
-  Pick<UseTasksModalReturn, 'handleOpenTasksModal'>
+  Pick<UseTasksModalReturn, 'handleOpenTasksModal'> &
+  Pick<UseUsersReturn, 'users' | 'isLoadingUsers'>
 
-const MAX_ROW_LENGTH = 50
+const MAX_ROW_LENGTH = 30
 
 export function WorkOrdersTable({
+  users,
   workOrders,
+  isLoadingUsers,
   handleSetAnchor,
   handleOpenTasksModal,
 }: WorkOrdersTableProps) {
@@ -41,6 +49,7 @@ export function WorkOrdersTable({
             <TableCell>{t('table.head.title')}</TableCell>
             <TableCell>{t('table.head.priority')}</TableCell>
             <TableCell>{t('table.head.description')}</TableCell>
+            <TableCell>{t('table.head.users')}</TableCell>
             <TableCell>{t('table.head.openTasksModal')}</TableCell>
             <TableCell>{t('Glossary:action', { count: 100 })}</TableCell>
           </TableParts.NoWrapRow>
@@ -79,6 +88,14 @@ export function WorkOrdersTable({
                   ) : (
                     workOrder.description
                   )}
+                </TableCell>
+
+                <TableCell>
+                  <AssignedUsers
+                    users={users}
+                    isLoading={isLoadingUsers}
+                    assignedUserIds={workOrder.assignedUserIds}
+                  />
                 </TableCell>
 
                 <TableCell>

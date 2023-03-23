@@ -9,7 +9,8 @@
       "id": "ID",
       "status": "Status",
       "name": "Nome",
-      "healthScore": "Saúde (em %)"
+      "healthScore": "Saúde (em %)",
+      "users": "Responsáveis"
     }
   },
   "deleteModal": {

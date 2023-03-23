@@ -4,6 +4,7 @@ export * from './dumb/PageLayout'
 export * from './dumb/TableParts'
 export * from './dumb/AlertDialog'
 export * from './dumb/DocumentTitle'
+export * from './dumb/AssignedUsers'
 export * from './dumb/TextWithCaption'
 export * from './dumb/RouterLinkNoStyles'
 

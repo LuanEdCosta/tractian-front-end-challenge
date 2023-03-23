@@ -10,14 +10,21 @@ import {
 
 import { AssetModel } from 'src/models'
 import { UseAnchorReturn } from 'src/hooks'
-import { AssetStatusPresenter, TableParts } from 'src/components'
+import { AssetStatusPresenter, AssignedUsers, TableParts } from 'src/components'
 
 import { UseAssetsReturn } from '../hooks/useAssets.hook'
+import { UseUsersReturn } from '../hooks/useUsers.hook'
 
 type AssetsTableProps = Pick<UseAssetsReturn, 'assets'> &
-  Pick<UseAnchorReturn<AssetModel>, 'handleSetAnchor'>
+  Pick<UseAnchorReturn<AssetModel>, 'handleSetAnchor'> &
+  Pick<UseUsersReturn, 'users' | 'isLoadingUsers'>
 
-export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
+export function AssetsTable({
+  users,
+  assets,
+  isLoadingUsers,
+  handleSetAnchor,
+}: AssetsTableProps) {
   const { t } = useTranslation(['Assets', 'Glossary'])
 
   return (
@@ -29,6 +36,7 @@ export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
             <TableCell>{t('table.head.status')}</TableCell>
             <TableCell>{t('table.head.name')}</TableCell>
             <TableCell>{t('table.head.healthScore')}</TableCell>
+            <TableCell>{t('table.head.users')}</TableCell>
             <TableCell>{t('Glossary:action', { count: 100 })}</TableCell>
           </TableParts.NoWrapRow>
         </TableHead>
@@ -53,6 +61,14 @@ export function AssetsTable({ assets, handleSetAnchor }: AssetsTableProps) {
                 <TableCell>
                   <span>{asset.healthscore}</span>
                   <span>%</span>
+                </TableCell>
+
+                <TableCell>
+                  <AssignedUsers
+                    users={users}
+                    isLoading={isLoadingUsers}
+                    assignedUserIds={asset.assignedUserIds}
+                  />
                 </TableCell>
 
                 <TableParts.CellOverLink>

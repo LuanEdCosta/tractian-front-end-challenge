@@ -9,7 +9,7 @@ const api = axios.create({
 })
 
 export async function findMany(
-  { page, pageSize }: PaginationParams,
+  { page, pageSize }: Partial<PaginationParams>,
   { search }: UserFilters,
 ) {
   const params = PaginationUtils.getPaginationParams({ page, pageSize })

@@ -16,6 +16,7 @@ import { AssetsSkeleton } from './components/AssetsSkeleton.component'
 import { DeleteAssetModal } from './components/DeleteAssetModal.component'
 import { AssetsPagination } from './components/AssetsPagination.component'
 import { AssetsPageActions } from './components/AssetsPageActions.component'
+import { useUsers } from './hooks/useUsers.hook'
 
 export function AssetsPage() {
   const { t } = useTranslation('Assets')
@@ -30,7 +31,6 @@ export function AssetsPage() {
   } = useAssetActions()
 
   const { page, setPage, handleResetPage } = usePagination(INITIAL_PAGE)
-
   const { currentFilters, register, handleSubmit, handleSearch } = useFilters({
     handleResetPage,
   })
@@ -41,8 +41,8 @@ export function AssetsPage() {
   )
 
   const { numberOfPages } = useNumberOfPages(totalAssets, PAGE_SIZE)
-
   const { handleDeleteAsset } = useDeleteAsset(anchor?.data.id ?? 0)
+  const { users, isLoadingUsers } = useUsers()
 
   return (
     <PageLayout.Container>
@@ -76,7 +76,12 @@ export function AssetsPage() {
           if (isLoadingAssets) return <AssetsSkeleton />
           else if (assets.length === 0) return <AssetsEmpty />
           return (
-            <AssetsTable assets={assets} handleSetAnchor={handleSetAnchor} />
+            <AssetsTable
+              users={users}
+              assets={assets}
+              isLoadingUsers={isLoadingUsers}
+              handleSetAnchor={handleSetAnchor}
+            />
           )
         })()}
 

@@ -1,12 +1,24 @@
 {
   "clearMocks": true,
   "coverageProvider": "v8",
+  "testEnvironment": "jsdom",
   "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"],
   "extensionsToTreatAsEsm": [".ts", ".tsx"],
   "moduleNameMapper": {
     "src/(.*)": "<rootDir>/src/$1"
   },
   "transform": {
-    "^.+\\.(t|j)sx?$": "@swc/jest"
+    "^.+\\.(t|j)sx?$": [
+      "@swc/jest",
+      {
+        "jsc": {
+          "transform": {
+            "react": {
+              "runtime": "automatic"
+            }
+          }
+        }
+      }
+    ]
   }
 }

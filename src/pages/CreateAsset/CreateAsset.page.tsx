@@ -43,7 +43,7 @@ export function CreateAssetPage() {
       <DocumentTitle title={title} />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink=".." />
+        <PageLayout.Title title={title} backButtonLink="/" />
 
         {(() => {
           if (isFetching) return <AssetFormSkeleton />

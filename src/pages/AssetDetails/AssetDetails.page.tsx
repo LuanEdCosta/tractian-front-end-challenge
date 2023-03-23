@@ -37,7 +37,7 @@ export function AssetDetailsPage() {
       />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink="..">
+        <PageLayout.Title title={title} backButtonLink="/">
           {asset && (
             <AssetDetailsActions
               isDeletingAsset={isDeletingAsset}

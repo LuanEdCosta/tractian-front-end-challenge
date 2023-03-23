@@ -38,7 +38,7 @@ export function CreateUserPage() {
       <DocumentTitle title={title} />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink=".." />
+        <PageLayout.Title title={title} backButtonLink="/users" />
 
         {(() => {
           if (isFetching) return <UserFormSkeleton />

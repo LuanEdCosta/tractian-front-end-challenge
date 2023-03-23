@@ -35,7 +35,7 @@ export function CreateUnitPage() {
       <DocumentTitle title={title} />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink=".." />
+        <PageLayout.Title title={title} backButtonLink="/units" />
 
         {(() => {
           if (isFetching) return <UnitFormSkeleton />

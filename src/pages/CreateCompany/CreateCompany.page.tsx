@@ -36,7 +36,7 @@ export function CreateCompanyPage() {
       <DocumentTitle title={title} />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink=".." />
+        <PageLayout.Title title={title} backButtonLink="/companies" />
 
         {(() => {
           if (isFetching) return <CompanyFormSkeleton />

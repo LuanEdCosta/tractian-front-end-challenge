@@ -49,7 +49,7 @@ export function CreateWorkOrderPage() {
       <DocumentTitle title={title} />
 
       <PageLayout.Content>
-        <PageLayout.Title title={title} backButtonLink=".." />
+        <PageLayout.Title title={title} backButtonLink="/workOrders" />
 
         {(() => {
           if (isFetching) return <WorkOrderFormSkeleton />
